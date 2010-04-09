@@ -1,0 +1,21 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=3050
+
+1. Jump to next tag on screen in a help file.
+
+When the cursor is at or after the last tag on the screen continue the search
+at the top of the screen.
+
+mapped to: <tab>, <s-tab> in normal mode
+disable with: let g:loaded_smartmove_nexthelptag=-1
+
+The mapping is created on BufEnter when buftype=help or the buffer is readonly
+and filetype=help.
+
+2. Use H and L instead of ctrl-f and ctrl-b
+
+When the cursor is at the top of the screen and H is pressed the screen is
+scrolled up. When count is given or the cursor is not at the top of the screen,
+the default function of H is executed (Home). Similar for L.
+
+mapped to: H, L in normal and visual mode
+disable with: let g:loaded_smartmove_smartscreen=-1
